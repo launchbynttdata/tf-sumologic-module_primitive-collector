@@ -1,4 +1,4 @@
-module github.com/nexient-llc/tf-sumologic-module-collector
+module github.com/launchbynttdata/tf-sumologic-module_collector
 
 go 1.20
 
