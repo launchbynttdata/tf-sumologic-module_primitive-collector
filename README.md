@@ -1,4 +1,4 @@
-# tf-sumologic-module-collector
+# tf-sumologic-module_primitive-collector
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
@@ -108,14 +108,14 @@ If `make check` target is successful, developer is good to commit the code to pr
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.0, <= 1.5.5 |
-| <a name="requirement_sumologic"></a> [sumologic](#requirement\_sumologic) | >= 2.24.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.0 |
+| <a name="requirement_sumologic"></a> [sumologic](#requirement\_sumologic) | ~> 2.24 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_sumologic"></a> [sumologic](#provider\_sumologic) | 2.27.0 |
+| <a name="provider_sumologic"></a> [sumologic](#provider\_sumologic) | 2.31.3 |
 
 ## Modules
 

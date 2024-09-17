@@ -11,12 +11,15 @@
 // limitations under the License.
 
 terraform {
-  required_version = ">= 1.1.0"
+  required_version = "~> 1.0"
 
   required_providers {
-    random = ">= 3.4.3"
+    random = {
+      version = "~> 3.0"
+      source  = "hashicorp/random"
+    }
     sumologic = {
-      version = ">= 2.24.0"
+      version = "~> 2.24"
       source  = "SumoLogic/sumologic"
     }
   }
