@@ -176,6 +176,11 @@ define github_provider
 provider \"github\" {\n  owner = \"$(GITHUB_OWNER)\"\n}\n
 endef
 
+
+define sumologic_provider
+provider \"sumologic\" {\n  environment = \"$(SUMOLOGIC_ENVIRONMENT)\"\n}\n
+endef
+
 define provider_file_path
 $(1)/provider.tf
 endef
@@ -186,6 +191,7 @@ define add_provider_details
 	$(if $(findstring microsoft/azuredevops,$(2)),grep -qs "azuredevops" $(1) || bash -c 'echo -e "$(call azuredevops_provider)"' >> $(1),)
 	$(if $(findstring hashicorp/azurerm,$(2)),grep -qs "azurerm" $(1) || bash -c 'echo -e "$(call azurerm_provider)"' >> $(1),)
 	$(if $(findstring integrations/github,$(2)),grep -qs "github" $(1) || bash -c 'echo -e "$(call github_provider)"' >> $(1),)
+	$(if $(findstring sumologic/sumologic,$(2)),grep -qs "sumologic" $(1) || bash -c 'echo -e "$(call sumologic_provider)"' >> $(1),)
 endef
 
 define create_example_providers
