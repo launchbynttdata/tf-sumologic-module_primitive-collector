@@ -103,19 +103,13 @@ If `make check` target is successful, developer is good to commit the code to pr
 - runs `conftests`. `conftests` make sure `policy` checks are successful.
 - runs `terratest`. This is integration test suit.
 - runs `opa` tests
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.0, < 2.0 |
 | <a name="requirement_sumologic"></a> [sumologic](#requirement\_sumologic) | ~> 2.24 |
-
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_sumologic"></a> [sumologic](#provider\_sumologic) | 2.31.3 |
 
 ## Modules
 
@@ -131,15 +125,15 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | Name of the Collector, must be unique across this Sumo Logic organization. | `string` | n/a | yes |
-| <a name="input_description"></a> [description](#input\_description) | Optional description of the collector. Defaults to 'Created by Terraform' if not set. | `string` | `"Created by Terraform"` | no |
-| <a name="input_timezone"></a> [timezone](#input\_timezone) | Optional time zone to use for this collector. If provided, this should follow the IANA time zone naming convention. Default (not set) will result in Etc/UTC being used. | `string` | `null` | no |
 | <a name="input_category"></a> [category](#input\_category) | Default \_sourceCategory for any source attached to this collector. Can be overridden at the source level. | `string` | `null` | no |
+| <a name="input_description"></a> [description](#input\_description) | Optional description of the collector. Defaults to 'Created by Terraform' if not set. | `string` | `"Created by Terraform"` | no |
 | <a name="input_fields"></a> [fields](#input\_fields) | Map containing key/value pairs of fields that will be added by default to this collector. | `map(string)` | `null` | no |
+| <a name="input_name"></a> [name](#input\_name) | Name of the Collector, must be unique across this Sumo Logic organization. | `string` | n/a | yes |
+| <a name="input_timezone"></a> [timezone](#input\_timezone) | Optional time zone to use for this collector. If provided, this should follow the IANA time zone naming convention. Default (not set) will result in Etc/UTC being used. | `string` | `null` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_collector_id"></a> [collector\_id](#output\_collector\_id) | n/a |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->
